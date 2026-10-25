@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small after-class planner. Choose your energy and free time to find a plan that fits your day.">
+  <title>After Class — What's next?</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header><a class="wordmark" href="./">after class<span>↗</span></a><span class="header-note">A LITTLE SPACE FOR YOURSELF</span></header>
+  <main>
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">CLOSE THE LAPTOP. CHECK IN WITH YOURSELF.</p><h1 id="page-title">The day isn't over.<br><em>What's next?</em></h1><p>No big decisions. Just a plan that matches your energy<br class="desktop-break"> and the time you have.</p></section>
+    <div class="planner">
+      <section class="choices" aria-labelledby="choices-title">
+        <div class="section-heading"><h2 id="choices-title">First, a quick check-in.</h2><span>01—02</span></div>
+        <form id="plan-form" novalidate>
+          <fieldset><legend><span class="number">01</span> How's your energy?</legend><p class="question-help">Go with how you feel right now.</p><div class="energy-options">
+            <label class="choice"><input type="radio" name="energy" value="low"><span><b>Running on empty</b><small>A quiet evening sounds good.</small><i aria-hidden="true">○</i></span></label>
+            <label class="choice"><input type="radio" name="energy" value="medium"><span><b>A little left in the tank</b><small>Up for something easy.</small><i aria-hidden="true">◐</i></span></label>
+            <label class="choice"><input type="radio" name="energy" value="high"><span><b>Ready for something</b><small>Let's make a little plan.</small><i aria-hidden="true">●</i></span></label>
+          </div></fieldset>
+          <fieldset><legend><span class="number">02</span> How much time is yours?</legend><p class="question-help">A short break counts, too.</p><div class="time-options">
+            <label><input type="radio" name="minutes" value="20"><span><b>20</b><small>MINUTES</small></span></label>
+            <label><input type="radio" name="minutes" value="45"><span><b>45</b><small>MINUTES</small></span></label>
+            <label><input type="radio" name="minutes" value="90"><span><b>90</b><small>MINUTES</small></span></label>
+          </div></fieldset>
+          <p id="form-message" role="alert"></p>
+          <button class="primary" type="submit"><span id="submit-label">Find my plan</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <button id="reset-button" class="text-button" type="button">Start fresh ↺</button>
+      </section>
+      <section class="result" id="result" data-outcome="waiting" aria-labelledby="result-title">
+        <div class="result-top"><span id="result-kicker">YOUR AFTER-CLASS EDIT</span><span id="result-number">— / 03</span></div>
+        <div class="artwork"><img id="result-image" src="images/recharge.svg" alt="An illustrated armchair beside a lamp and a window."><span class="sticker" id="result-sticker">THERE'S NO WRONG ANSWER</span></div>
+        <div class="result-copy"><p class="eyebrow" id="result-label">A MOMENT FOR YOU</p><h2 id="result-title" tabindex="-1">A plan that fits your day.</h2><p id="result-description">Choose your energy and free time. Your next little moment starts here.</p><p class="reason" id="result-reason" hidden></p><ol class="plan-steps" id="plan-steps" hidden></ol><button id="accept-button" type="button" class="accept-button" hidden>That's my plan ✓</button><p class="confirmation" id="confirmation" role="status" aria-live="polite"></p></div>
+      </section>
+    </div>
+    <div class="session-note"><p><span class="session-dot" aria-hidden="true">●</span> <span id="session-status">Your afternoon, your pace.</span></p><span>RECHARGE · QUICK RESET · MINI ADVENTURE</span></div>
+    <noscript><p class="no-js">Please enable JavaScript to get a plan based on your choices.</p></noscript>
+  </main>
+  <footer><span>AFTER CLASS ↗</span><span>SMALL PLANS. GOOD POSSIBILITIES.</span></footer>
+</body>
+</html>
